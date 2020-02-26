@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liangmeng-gitlistener/config-repo.git
+          username: 407466434@qq.com
+          password: lm2253351
+          basedir: /Users/lm/IdeaProjects/SpringCloud_Sell/config/configDir
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
